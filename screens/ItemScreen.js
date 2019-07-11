@@ -22,19 +22,19 @@ export default function ItemScreen(props) {
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
-        <View>
-          <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
-          <Text>{params.item.Name}</Text>
+        <View style={styles.titleholder}>
+          <Image style={styles.imagesmall} source={require('../assets/images/food.jpeg')} />
+          <Text style={styles.title}>{params.item.Name}</Text>
         </View>
           {params.item.Details.map((detail, i)=> (
-            <View key={detail.title+""+i}>
+            <View style={styles.holder} key={detail.title+""+i}>
                 <View>
-                  <Text>{detail.Title}</Text>
+                  <Text style={styles.captionText}>{detail.Title}</Text>
                   <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
                   <Text>{detail.Description}</Text>
                 </View>
               {params.item.RelatedImages.map((image,i) => {
-                <View key={image.Description+""+i}>
+                <View style={styles.holder} key={image.Description+""+i}>
                   <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
                   <Text>{image.Description}</Text>
                 </View>
@@ -49,7 +49,7 @@ export default function ItemScreen(props) {
 ItemScreen.navigationOptions = {
   headerTitle: 'Cooking',
   headerStyle: {
-    backgroundColor: '#f06297',
+    backgroundColor: 'skyblue',
     height: 65
   },
   headerTintColor: '#fff',
@@ -66,8 +66,30 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingTop: theme.spacing.unit,
   },
-  image: {
+  holder: {
+    margin: theme.spacing.unit,
+  },
+  titleholder: {
+    margin: theme.spacing.unit,
+    alignItems: 'center'
+  },
+  image:{
+    width: 150,
+    height: 150,
+    borderRadius: theme.spacing.unit,
+    alignItems: 'center'
+  },
+  imagesmall:{
+    width: 80,
     height: 80,
-    width: 80
+    borderRadius: theme.spacing.unit,
+    alignItems: 'center'
+  },
+  title: {
+    ...theme.typography.h2
+  },
+  captionText: {
+    ...theme.typography.h3,
+    fontWeight: 'bold'
   }
 });

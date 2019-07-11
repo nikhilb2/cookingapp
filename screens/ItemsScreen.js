@@ -36,7 +36,7 @@ export default function ItemsScreen(props) {
 ItemsScreen.navigationOptions = {
   headerTitle: 'Cooking',
   headerStyle: {
-    backgroundColor: '#f06297',
+    backgroundColor: 'skyblue',
     height: 65
   },
   headerTintColor: '#fff',
