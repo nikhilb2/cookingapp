@@ -25,6 +25,7 @@ class ItemScreen extends Component {
 
   render() {
     const { params } = this.props.navigation.state
+    const { navigation } = this.props
     console.log('params');
     console.log(params);
     return (
@@ -63,6 +64,7 @@ class ItemScreen extends Component {
             <Button caption="Close" style={styles.button} onClick={()=>this.setState({showModal: false})} />
           </View>
         </Modal>
+        <Button style={styles.button} caption='Other Benefits' onClick={()=> navigation.navigate('OtherBenefits', {OtherBenefits: params.item.RelatedImages})} />
       </View>
     );
   }
@@ -126,8 +128,7 @@ const styles = StyleSheet.create({
     marginBottom: 'auto'
   },
   button: {
-    marginRight: 'auto',
-    marginLeft: 'auto'
+
   },
   imageTap: {
     marginRight: 'auto',
