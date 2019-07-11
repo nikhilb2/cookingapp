@@ -11,21 +11,21 @@ import {
 } from 'react-native';
 
 import theme from '../src/theme'
-import cooking from '../src/cooking'
-import Category from '../components/category'
 
 
 export default function HomeScreen() {
+  const { params } = this.props.navigation.state
   return (
     <View style={styles.container}>
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
-        {cooking.Categories.map((category,i)=>(
-          <TouchableOpacity key={category.Name+i}>
-            <Category category={category} />
-          </TouchableOpacity>
-        ))}
+          {params.items.map((item, i)=> (
+            <View>
+              <Image source={require('../assets/images/food.jpeg')} />
+              <Text>{params.items.Name}</Text>
+            </View>
+          ))}
       </ScrollView>
     </View>
   );

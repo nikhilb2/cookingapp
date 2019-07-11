@@ -1,11 +1,10 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
 import theme from '../src/theme'
-import { Entypo } from '@expo/vector-icons'
 import { titleCase } from '../utils/capitalize'
 
 const CategoryItem = props => {
-  const { category } = props
+  const { dish } = props
   return (
     <View style={styles.root}>
         <Text style={styles.text}>{titleCase(category.Name)}</Text>
