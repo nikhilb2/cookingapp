@@ -23,19 +23,19 @@ export default function ItemScreen(props) {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
         <View style={styles.titleholder}>
-          <Image style={styles.imagesmall} source={require('../assets/images/food.jpeg')} />
+          {params.item.Image.length > 0 ? <Image style={styles.imagesmall} source={{uri: params.item.Image}} /> : null }
           <Text style={styles.title}>{params.item.Name}</Text>
         </View>
           {params.item.Details.map((detail, i)=> (
             <View style={styles.holder} key={detail.title+""+i}>
                 <View>
                   <Text style={styles.captionText}>{detail.Title}</Text>
-                  <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
+                  {detail.Image.length > 0 ? <Image style={styles.image} source={{uri: detail.Image}} /> : null}
                   <Text>{detail.Description}</Text>
                 </View>
               {params.item.RelatedImages.map((image,i) => {
                 <View style={styles.holder} key={image.Description+""+i}>
-                  <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
+                {image.Image.length>0 ? <Image style={styles.image} source={{uri: image.Image}} /> : null}
                   <Text>{image.Description}</Text>
                 </View>
               })}

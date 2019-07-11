@@ -1,26 +1,263 @@
 {
 	"AboutApp": {
-		"Description": "This App helps user to improve cooking quality."
+		"Description": "This App helps user to improve cooking quality. Eating more fruit is an excellent way to improve overall health and reduce the risk of disease. Fruits are an excellent source of essential vitamins and minerals, and they are high in fiber. Fruits also provide a wide range of health-boosting antioxidants, including flavonoids. Eating a diet high in fruits and vegetables can reduce a person's risk of developing heart disease, cancer, inflammation, and diabetes. Citrus fruits and berries may be especially powerful for preventing disease. A 2014 study ranked powerhouse  fruit and vegetables by high nutrient density and low calories. Lemons came out top of the list, followed by strawberry, orange, lime, and pink and red grapefruit. In this article, we look at the nutrition and the many and varied health benefits of these and other fruits you can find in the supermarket."
 	},
 	"Categories": [{
-		"Name": "Indian Food",
-		"Items": [{
-			"Name": "Rajma Chawal",
-			"Details": [{
-					"Title": "About Rajma Chawal",
-					"Image": "IMAGEURL",
-					"Description": "Rajma Chawal description"
-				},
-				{
-					"Title": "Process for cooking Rajma Chawal",
-					"Image": "IMAGEURL",
-					"Description": "Rajma Chawal description"
-				}
-			],
-			"RelatedImages": [{
-				"Image": "IMAGEURL",
-				"Description": "ImageDescription"
-			}]
-		}]
+		"Name": "Click here to show the benifits of fruits",
+		"Image": "https://basket.com/wp-content/uploads/2018/07/What-Your-Favorite-Fruit-Says-About-You.jpg",
+		"Items": [
+
+			{
+				"Name": "Apple",
+				"Image": "https://www.health-alternatives.com/images/apple.jpg",
+				"Details": [{
+						"Title": "Nutritional Value of an Apple",
+						"Image": "https://a.imge.to/2019/07/11/cKCMR.png",
+						"Description": "An apple a day keeps the doctor away is an old Welsh proverb that most of us are familiar with, but what makes this fruit so special? What health benefits are associated with eating apples?. One medium apple with skin contains 0.47 grams of protein, 95 calories, and 4.4 grams of dietary fiber."
+					},
+					{
+						"Title": "",
+						"Image": "https://www.nutritionadvance.com/wp-content/uploads/2017/12/red-and-green-apples.jpg",
+						"Description": "As one of the most cultivated and consumed fruits in the world, apples are continuously being praised as a miracle food.Apples make a quick and easy addition to the diet. Eat them with the skin on for the greatest health benefits."
+					}, {
+						"Title": "Benefits",
+						"Image": "",
+						"Description": "A collection of research studies suggests that apples may well be one of the most healthy foods for you to include in your daily diet. Let's take a look at the studies and the possible health benefits suggested by them:"
+					}, {
+						"Title": "Improving neurological health",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/267/267290/3d-representation-of-a-brain.jpg",
+						"Description": "A 2006 study published in the journal Experimental Biology and Medicine found that quercetin (one of the antioxidants found abundantly in apples) was one of two compounds that helped to reduce cellular death that is caused by oxidation and inflammation of neurons."
+					}, {
+						"Title": "",
+						"Image": "",
+						"Description": "Another study presented at the same conference and published in the Journal of Alzheimer's Disease suggested that apple juice consumption may increase the production in the brain of the essential neurotransmitter acetylcholine, resulting in improved memory among mice who have Alzheimer's-like symptoms. It should be noted that both studies were funded by unrestricted grants provided by the U.S. Apple Association and Apple Products Research and Education Council."
+					}, {
+						"Title": "Preventing dementia",
+						"Image": "",
+						"Description": "A study published in the Journal of Food Science in 2008 suggested that eating apples may have benefit for your neurological health. The researchers found that including apples in your daily diet may protect neuron cells against oxidative stress-induced neurotoxicity and may play an important role in reducing the risk of neurodegenerative disorders such as Alzheimer's disease."
+					}, {
+						"Title": "How to eat apples",
+						"Image": "",
+						"Description": "Raw apples make a great snack and combining them with almond butter helps balance protein and fat intake. People can also add raw or stewed apples to yogurt, or use applesauce in cooking."
+					}, {
+						"Title": "Reducing your risk of stroke",
+						"Image": "",
+						"Description": "A study involving 9,208 men and women showed that those who ate the most apples over a 28-year period had the lowest risk for stroke. The researchers concluded that the intake of apples is related to a decreased risk of thrombotic stroke"
+					}, {
+						"Title": "Lowering levels of bad cholesterol",
+						"Image": "",
+						"Description": "A group of researchers at The Florida State University stated that apples are a miracle fruit . They found that older women who ate apples everyday had 23% less bad cholesterol (LDL) and 4% more good cholesterol (HDL) after just six months."
+					}, {
+						"Title": "Reducing your risk of diabetes",
+						"Image": "",
+						"Description": "Apples could also help lower your risk of diabetes. A study involving 187,382 people found that people who ate three servings per week of apples, grapes, raisins, blueberries or pears had a 7% lower risk of developing type 2 diabetes compared to those who did not."
+					}, {
+						"Title": "Warding off breast cancer",
+						"Image": "",
+						"Description": "There is growing evidence suggesting that an apple a day may help prevent breast cancer, according to a series of studies conducted by prominent Cornell researcher Rui Hai Liu. Liu said her research adds to the growing evidence that increased consumption of fruits and vegetables, including apples, would provide consumers with more phenolics, which are proving to have important health benefits. I would encourage consumers to eat more and a wide variety of fruits and vegetables daily."
+					}, {
+						"Title": "Obesity",
+						"Image": "",
+						"Description": "In a study published in the journal Food Chemistry in 2014, a team of researchers analyzed how the bioactive compounds of seven different varieties of apples - Granny Smith, Braeburn, Fuji, Gala, Golden Delicious, McIntosh and Red Delicious - affected the good gut bacteria of diet-induced obese mice."
+					}, {
+						"Title": "Nutrition",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/267290-apples.jpg",
+						"Description": "Apples deserve to be called nutritional powerhouses. They contain the following important nutrients:"
+					}, {
+						"Title": "Risks",
+						"Image": "",
+						"Description": "No serious side effects are linked to apple consumption. Apple seeds contain contain cyanide, a powerful poison. Eating too many apple seeds can potentially be fatal. Apple seeds should not be consumed. In addition, because apples are fairly acidic, they could be up to four times more damaging to teeth than carbonated drinks, according to a study led by Professor David Bartlett at the King's Dental Institute. Professor Bartlett said that snacking on acidic foods throughout the day is the most damaging, whilst eating them at meal times is much safer. It's not what you eat it's how you eat it - an apple a day is good, but taking all day to eat the apple can damage teeth."
+					}
+				],
+				"RelatedImages": [{
+					"Title": "FAQs",
+					"Image": "https://www.nutritionadvance.com/wp-content/uploads/2017/12/red-and-green-apples.jpg",
+					"Description": ""
+				}, {
+					"Title": "",
+					"Image": "",
+					"Description": "Should I eat the apple peel? - Most of the fiber and antioxidants are in the peel, says Dianne Hyson, Ph.D., R.D.6, a research dietitian at UC Davis in the Department of Internal Medicine."
+				}, {
+					"Title": "",
+					"Image": "",
+					"Description": "What about pesticides on the peel? - Dr. Hyson says Despite public misperceptions, laboratories have consistently found very low levels - if any - of pesticide residues on the skin of apples."
+				}, {
+					"Title": "",
+					"Image": "",
+					"Description": "I have type 2 diabetes, can I eat apples? - According to the American Diabetes Association, Apples are a nutritious food and you can still eat them even if you have diabetes. The Association reminds people to eat the peel and advises on buying small apples (2.5 inches in diameter)."
+				}]
+			}, {
+				"Name": "Avocado",
+				"Image": "https://www.health-alternatives.com/images/avocado.jpg",
+				"Details": [{
+						"Title": "Nutritional Value of an Avocado",
+						"Image": "https://a.imge.to/2019/07/11/cGyuk.png",
+						"Description": "One medium avocado contains 4.02 grams of protein, 322 calories and 13.5 grams of fiber. Many people refer to avocados as a superfood because of their healthful qualities. Avocados are rich in oleic acid, a monounsaturated fat which helps lower cholesterol levels. The American Heart Association say that maintaining healthy cholesterol levels with healthful fats could reduce the risk of heart disease and stroke. Like bananas, avocados are rich in potassium. They also contain lutein, an antioxidant which is important for healthy eyes and skin."
+					},
+					{
+						"Title": "",
+						"Image": "",
+						"Description": "Avocados are a stone fruit with a creamy texture that grow in warm climates. Their potential health benefits include improving digestion, decreasing risk of depression, and protection against cancer. Also known as an alligator pear or butter fruit, the versatile avocado is the only fruit that provides a substantial amount of healthy monounsaturated fatty acids (MUFA). Avocados are a naturally nutrient-dense food and contain nearly 20 vitamins and minerals."
+					}, {
+						"Title": "Benefits",
+						"Image": "",
+						"Description": "Eating a diet that contains plenty of fruits and vegetables of all kinds has long been associated with a reduced risk of many lifestyle-related health conditions. Numerous studies have found that a predominantly plant-based diet that includes foods such as avocados can help to decrease the risk of obesity, diabetes, heart disease, and overall mortality while promoting a healthy complexion and hair, increased energy, and overall lower weight."
+					}, {
+						"Title": "1. Avocados are nutrient rich",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/270/270406/avocado-stoned-and-destoned.jpg",
+						"Description": "According to the USDA National Nutrient Database, one serving (one-fifth of an avocado, approximately 40 grams) contains: Avocados are a great source of vitamins C, E, K, and B-6, as well as riboflavin, niacin, folate, pantothenic acid, magnesium, and potassium. They also provide lutein, beta-carotene, and omega-3 fatty acids. Although most of the calories in an avocado come from fat, don't shy away! Avocados are full of healthy, beneficial fats that help to keep you full and satiated. When you consume fat, your brain receives a signal to turn off your appetite. Eating fat slows the breakdown of carbohydrates, which helps to keep sugar levels in the blood stable."
+					}, {
+						"Title": "",
+						"Image": "",
+						"Description": "Fat is essential for every single cell in the body. Eating healthy fats supports skin health, enhances the absorption of fat-soluble vitamins, minerals, and other nutrients, and may even help boost the immune system."
+					}, {
+						"Title": "2. Healthy for the heart",
+						"Image": "",
+						"Description": "Avocados contain 25 milligrams per ounce of a natural plant sterol called beta-sitosterol. Regular consumption of beta-sitosterol and other plant sterols has been seen to help maintain healthy cholesterol levels."
+					}, {
+						"Title": "3. Great for vision",
+						"Image": "https://www.nutritionadvance.com/wp-content/uploads/2017/12/an-avocado-cut-in-half-showing-the-seed-in-the-middle.jpg",
+						"Description": "Avocados contain lutein and zeaxanthin, two phytochemicals that are especially concentrated in the tissues in the eyes where they provide antioxidant protection to help minimize damage, including from ultraviolet light. As the monounsaturated fatty acids in avocados also support the absorption of other beneficial fat-soluble antioxidants, such as beta-carotene, adding avocados to your diet may help to reduce the risk of developing age-related macular degeneration."
+					}, {
+						"Title": "4. Osteoporosis prevention",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/270/270406/man-with-knee-pain.jpg",
+						"Description": "Half of an avocado provides approximately 25 percent of the daily recommended intake of vitamin K. This nutrient is often overlooked, but is essential for bone health. Vitamin K is often overshadowed by calcium and vitamin D when thinking of nutrients important for maintaining healthy bones, however, eating a diet with adequate vitamin K can support bone health by increasing calcium absorption and reducing urinary excretion of calcium."
+					}, {
+						"Title": "5. Cancer",
+						"Image": "",
+						"Description": "Adequate intake of folate from food has shown promise in protecting against colon, stomach, pancreatic, and cervical cancers. Although the mechanism behind this apparent reduction in risk is currently unknown, researchers believe that folate protects against undesirable mutations in DNA and RNA during cell division. Avocados may even have a role to play in cancer treatment, with some research finding that phytochemicals extracted from avocado can selectively inhibit the growth of precancerous and cancerous cells and cause the death of cancer cells, while encouraging the proliferation of immune system cells called lymphocytes. These phytochemicals have also been shown to decrease chromosomal damage caused by cyclophosphamide, a chemotherapy drug."
+					}, {
+						"Title": "6. Healthy babies",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/270/270406/baby-breast-feeding.jpg",
+						"Description": "Folate is extremely important for a healthy pregnancy. Adequate intake reduces the risk of miscarriage and neural tube defects. Recent research from McGill University found a 30 percent higher incidence of a variety of birth defects in baby mice conceived using sperm from mice with a folate deficiency compared with mice conceived using sperm from mice with adequate folate levels."
+					}, {
+						"Title": "7. Lower risk of depression",
+						"Image": "",
+						"Description": "Foods containing high levels of folate may help to decrease the risk of depression because folate helps to prevent the build-up of homocysteine, a substance that can impair circulation and delivery of nutrients to the brain. Excess homocysteine can also interfere with the production of serotonin, dopamine, and norepinephrine, which regulate mood, sleep, and appetite."
+					}, {
+						"Title": "8. Improved digestion",
+						"Image": "",
+						"Description": "Despite its creamy texture, an avocado is actually high in fiber with approximately 6-7 grams per half fruit. Eating foods with natural fiber can help prevent constipation, maintain a healthy digestive tract, and lower the risk of colon cancer."
+					}, {
+						"Title": "9. Natural detoxification",
+						"Image": "",
+						"Description": "Adequate fiber promotes regular bowel movements, which are crucial for the daily excretion of toxins through the bile and stool. Recent studies have shown that dietary fiber may also play a role in regulating the immune system and inflammation."
+					}, {
+						"Title": "10. Osteoporosis treatment",
+						"Image": "",
+						"Description": "Substances called saponins, found in avocados, soy and some other plant foods, are associated with relief of symptoms in knee osteoarthritis, with further research planned to determine the long-term effects of isolated extracts."
+					}
+
+				],
+				"RelatedImages": [{
+					"Title": "FAQs",
+					"Image": "",
+					"Description": ""
+				}, {
+					"Title": "Diet",
+					"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/270/270406/avocado-sandwich.jpg",
+					"Description": "You can tell how ripe an avocado is by gently pressing into the skin. If the avocado is firm and does not budge, you will need to let it ripen for a few days before consuming. Soft avocados make great guacamole or dip, while firmer avocados are great for slicing and adding to a salad or a sandwich. To speed up the ripening process, place an avocado in a paper bag with a banana."
+				}, {
+					"Title": "Quick tips:",
+					"Image": "",
+					"Description": "1- Spread avocado on toast in the morning instead of butter.2- Use avocado instead of mayonnaise in chicken or egg salad, or as a spread on a sandwich.3- The soft, creamy texture of an avocado and its mild taste make it a perfect first food for babies. Try these healthy and delicious recipes using avocado: Avocado can be used in a number of different forms, many of which are available to purchase online, including avocado oil. Avocado oil may be used for cooking, or for moisturizing the skin or hair, so check the product information before purchasing. As well as incorporating avocado into the diet, using avocado products on the skin is an option. Avocado is a popular ingredient in moisturizing products, such as face masks, available to purchase online."
+				}, {
+					"Title": "Risks",
+					"Image": "",
+					"Description": "It is the total diet or overall eating pattern that is most important in disease prevention and for achieving good health. It is better to eat a diet with variety than to concentrate on individual foods as the key to good health."
+				}, {
+					"Title": "",
+					"Image": "",
+					"Description": "If you are taking blood-thinners, such as Coumadin (warfarin), it is important that you do not suddenly begin to eat more or less foods containing vitamin K, which plays a large role in blood clotting."
+				}]
+			}, {
+				"Name": "Banana",
+				"Image": "https://www.health-alternatives.com/images/banana.jpg",
+				"Details": [{
+						"Title": "Nutritional Value of a Banana",
+						"Image": "https://a.imge.to/2019/07/11/cGf21.png",
+						"Description": "Bananas are well known for their high potassium content. A medium banana contains 422 mg of the adequate adult intake of 4,500 mg of potassium. Potassium helps the body control heart rate and blood pressure."
+					},
+					{
+						"Title": "",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/324/324431/healthiest-fruits-banana.jpg",
+						"Description": "Bananas are also a good source of energy, with one banana containing 105 calories and 26.95 g of carbohydrate. Bananas are also a good source of energy, with one banana containing 105 calories and 26.95 g of carbohydrate. The 3.1 g of fiber in a regular banana can also help with regular bowel movements and stomach issues, such as ulcers and colitis. A medium banana also contains the following nutrients:"
+					}, {
+						"Title": "",
+						"Image": "",
+						"Description": "Bananas are one of the most widely consumed fruits in the world for good reason. Eating them could help lower blood pressure and reduce the risks of cancer and asthma. Today, bananas are grown in at least 107 countries and are ranked fourth among the world's food crops in monetary value. Americans consume more bananas than apples and oranges combined."
+					}, {
+						"Title": "",
+						"Image": "",
+						"Description": "With the world consuming so many bananas, it's not surprising that people are asking the question: are bananas good for you? This article will take a look at the potential health benefits of bananas, such as improving heart health and promoting regularity. It also examines the possible health risks associated with them."
+					}, {
+						"Title": "Fast facts about bananas",
+						"Image": "",
+						"Description": "1- Bananas are rich in potassium and fiber.2-They may help prevent asthma, cancer, high blood pressure, diabetes, cardiovascular disease, and digestive problems.3- Ripen bananas at room temperature and add them to cereal for a tasty breakfast.4- People who use beta blockers should not suddenly increase their intake of bananas."
+					}, {
+						"Title": "Health benefits",
+						"Image": "",
+						"Description": "Listed below are the possible health benefits associated with bananas. It is important to note that more high quality studies are required before these health benefit links are proved definitive."
+					}, {
+						"Title": "Blood pressure",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/271/271157/a-doctor-measuring-blood-pressure-of-older-adults.jpg",
+						"Description": "Maintaining a low sodium intake is essential to lowering blood pressure, however increasing potassium intake may be just as important because of its vasodilation effects. According to the National Health and Nutrition Examination Survey, fewer than 2% of US adults meet the daily 4700 mg recommendation"
+					}, {
+						"Title": "Asthma",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/271/271157/asthma.jpg",
+						"Description": "A study conducted by the Imperial College of London found that children who ate just one banana per day had a 34% less chance of developing asthma."
+					}, {
+						"Title": "Cancer",
+						"Image": "",
+						"Description": "Consuming bananas, oranges, and orange juice in the first two years of life may reduce the risk of developing childhood leukemia. As a good source of vitamin C, bananas can help combat the formation of free radicals known to cause cancer. High fiber intakes from fruits and vegetables like bananas are associated with a lowered risk of colorectal cancer."
+					}, {
+						"Title": "Heart health",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/271/271157/heart-attack.jpg",
+						"Description": "The fiber, potassium, vitamin C and B6 content in bananas all support heart health. An increase in potassium intake along with a decrease in sodium intake is the most important dietary change that a person can make to reduce their risk of cardiovascular disease, according to Mark Houston, MD, MS, an associate clinical professor of medicine at Vanderbilt Medical School and director of the Hypertension Institute at St Thomas Hospital in Tennessee"
+					}, {
+						"Title": "Diabetes",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/271/271157/woman-takes-blood-sugar-test.jpg",
+						"Description": "Studies have shown that type 1 diabetics who consume high-fiber diets have lower blood glucose levels and type 2 diabetics may have improved blood sugar, lipids and insulin levels. One medium banana provides about 3 grams of fiber."
+					}, {
+						"Title": "Digestive health",
+						"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/271/271157/a-man-with-stomach-pain.jpg",
+						"Description": "Bland foods such as apple sauce and bananas are recommended for diarrhea treatment. They are part of an approach known as the BRAT diet; this stands for bananas, rice, applesauce, and toast."
+					}, {
+						"Title": "Preserving memory and boosting mood",
+						"Image": "",
+						"Description": "Bananas also contain tryptophan, an amino acid that studies suggest plays a role in preserving memory and boosting your mood."
+					}, {
+						"Title": "",
+						"Image": "",
+						"Description": ""
+					}
+				],
+				"RelatedImages": [{
+					"Title": "FAQs",
+					"Image": "",
+					"Description": ""
+				}, {
+					"Title": "Potassium",
+					"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/271157-bananas.jpg",
+					"Description": "Bananas are rich in a mineral called potassium. This mineral is important as it helps maintain fluid levels in the body and regulates the movement of nutrients and waste products in and out of cells."
+				}, {
+					"Title": "",
+					"Image": "",
+					"Description": "Potassium also helps muscles to contract and nerve cells to respond. It keeps the heart beating regularly and can reduce the effect of sodium on blood pressure. Potassium may reduce the risk of kidney stones forming as people age. In turn, healthy kidneys make sure that the right amount of potassium is kept in the body."
+				}, {
+					"Title": "",
+					"Image": "",
+					"Description": "One medium-sized banana contains 422 milligrams of potassium. It is best to try to get potassium from dietary sources such as bananas. Otherwise, potassium supplements are available to purchase online."
+				}, {
+					"Title": "Bananas in the diet",
+					"Image": "https://cdn1.medicalnewstoday.com/content/images/articles/271157-bananas-oatmeal.jpg",
+					"Description": "Fresh bananas are available year-round. Unlike other fruits, the ripening process of bananas does not slow down after they are picked. Bananas should be stored at room temperature. The warmer the temperature, the faster bananas will ripen. However, to slow ripening, bananas should be refrigerated. The outer peel of the banana will darken but the banana itself will stay intact longer."
+				}, {
+					"Title": "",
+					"Image": "",
+					"Description": "In 2008, a popular diet fad known as the Morning Banana Diet recommended eating a banana in the morning along with water, eating a normal lunch and having dinner before 8pm. Add a sliced banana to your morning cereal or oatmeal for a more nutritious breakfast."
+				}]
+			}
+		]
 	}]
 }

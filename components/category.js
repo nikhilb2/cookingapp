@@ -8,8 +8,9 @@ const CategoryItem = props => {
   const { category } = props
   return (
     <View style={styles.root}>
-        <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
-        <Text style={styles.text}>{titleCase(category.Name)}</Text>
+        <Image style={styles.image} source={{uri:category.Image}} />
+        <Text style={styles.text} numberOfLines={2}
+          ellipsizeMode="tail">{titleCase(category.Name)}</Text>
       <Entypo
         name="chevron-down"
         size={35}
@@ -42,10 +43,11 @@ const styles = StyleSheet.create({
     marginLeft: theme.spacing.unit
   },
   text: {
-    ...theme.typography.h2,
+    ...theme.typography.h3,
     position: 'absolute',
     left: theme.spacing.unit * 15,
-    top: '30%'
+    top: '30%',
+    width: '50%'
   }
 })
 

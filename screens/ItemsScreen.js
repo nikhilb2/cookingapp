@@ -1,5 +1,5 @@
 import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Image,
   Platform,
@@ -13,46 +13,63 @@ import {
 import theme from '../src/theme'
 import { AntDesign } from '@expo/vector-icons'
 import { logout, currentSession, updateFav } from '../src/UserSession'
+import ItemCard from '../components/ItemCard'
 
-const addTofavourites = ( item, id) => {
-  currentSession.favoriteIds.push(id)
-  currentSession.favoriteData.push(item)
-  updateFav(currentSession)
-  console.log(currentSession);
-}
+class  ItemsScreen extends Component {
 
-const findItem = (id) => {
-  let found = false
-  currentSession.favoriteIds.find(currentId => {
-    if (id===currentId) {
-      found = true
-    }
-  })
-  return found
-}
+  state = {
 
+  }
 
-export default function ItemsScreen(props) {
-  const { params } = props.navigation.state
-  const { navigation } = props
-  console.log(params);
-  return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
-          {params.items.map((item, i)=> (
-            <TouchableOpacity style={styles.holder} onPress={() => navigation.navigate("Item", {item:item})} key={item.Name+i}>
-              <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
-              <Text style={styles.text}>{item.Name}</Text>
-              <TouchableOpacity  style={styles.heart}  onPress={()=>addTofavourites(item, item.Name)}>
-              <AntDesign name={findItem(item.Name) ? 'heart' : 'hearto' } color='red' size={30}/>
-              </TouchableOpacity>
-            </TouchableOpacity>
-          ))}
-      </ScrollView>
-    </View>
-  );
+   addTofavourites( item, id) {
+    currentSession.favoriteIds.push(id)
+    currentSession.favoriteData.push(item)
+    updateFav(currentSession)
+    console.log(currentSession);
+    this.setState({hack:true})
+  }
+
+   removeFromfavorites(id) {
+    const indexOfFav = currentSession.favoriteIds.findIndex(favId => {
+      if (favId===id) {
+        return favId
+      }
+    })
+    currentSession.favoriteIds.splice(indexOfFav,1)
+    currentSession.favoriteData.splice(indexOfFav,1)
+    updateFav(currentSession)
+    this.setState({hack:true})
+  }
+
+  findItem(id) {
+    let found = false
+    currentSession.favoriteIds.find(currentId => {
+      if (id===currentId) {
+        found = true
+      }
+    })
+    return found
+  }
+
+  render() {
+    const { params } = this.props.navigation.state
+    const { navigation } = this.props
+    console.log(params);
+    return (
+      <View style={styles.container}>
+        <ScrollView
+          style={styles.container}
+          contentContainerStyle={styles.contentContainer}>
+            {params.items.map((item, i)=> (
+              <View key={item.Name+""+i}>
+                <ItemCard navigateTo={(screen, params) =>navigation.navigate(screen, params)} favorite={this.findItem(item.Name)} addTofavourites={(item, id) => this.addTofavourites(item, id)} item={item} removeFromfavorites={(id) => this.removeFromfavorites(id)}/>
+              </View>
+            ))}
+        </ScrollView>
+      </View>
+    );
+  }
+
 }
 
 ItemsScreen.navigationOptions = {
@@ -97,3 +114,5 @@ const styles = StyleSheet.create({
     top: '33%'
   }
 });
+
+export default ItemsScreen
