@@ -9,17 +9,18 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-
+import { SafeAreaView } from "react-navigation";
 import theme from '../src/theme'
 import cooking from '../src/cooking'
 import Category from '../components/category'
-
+import { logout, currentSession } from '../src/UserSession'
 
 export default function HomeScreen(props) {
-  console.log(props);
+  console.log('currentSession');
+  console.log(currentSession);
   const { navigation } = props
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} forceInset={{ bottom: 'never' }}>
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
@@ -28,8 +29,11 @@ export default function HomeScreen(props) {
             <Category category={category} />
           </TouchableOpacity>
         ))}
+        <TouchableOpacity onPress={()=>logout()} >
+          <Text>Logout</Text>
+        </TouchableOpacity>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -37,12 +41,12 @@ HomeScreen.navigationOptions = {
   headerTitle: 'Cooking',
   headerStyle: {
     backgroundColor: 'skyblue',
-    height: 65
+    height: 65,
   },
   headerTintColor: '#fff',
   headerTitleStyle: {
     fontWeight: 'bold'
-  }
+  },
 }
 
 const styles = StyleSheet.create({

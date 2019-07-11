@@ -8,6 +8,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Alert
 } from 'react-native';
 
 import theme from '../src/theme'
@@ -24,9 +25,12 @@ class FirstTimeScreen extends Component {
 
 
   async componentDidMount() {
+    const { navigation } = this.props
     await restoreSession()
     console.log(currentSession);
-    this.setState({user: currentSession})
+    if (currentSession) {
+      navigation.navigate("Main")
+    }
 
   }
 
@@ -55,6 +59,17 @@ class FirstTimeScreen extends Component {
           <Button
             caption='Continue'
             style={styles.button}
+            onClick={() => {
+              if (name) {
+                login({
+                  user:name,
+                  favoriteIds: [],
+                  favoriteData: []
+                })
+              } else {
+                Alert.alert("Error", "Please enter your name")
+              }
+            }}
             />
           </View>
         </ScrollView>

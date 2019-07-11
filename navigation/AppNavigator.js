@@ -8,6 +8,8 @@ import FirstTimeScreen from '../screens/FirstTimeScreen'
 const MainStack = createStackNavigator({
   Main: MainTabNavigator,
   FirstTime: FirstTimeScreen
+},{
+  headerMode: 'none',
 })
 
 export default createAppContainer(createSwitchNavigator(

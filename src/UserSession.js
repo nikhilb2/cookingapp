@@ -49,3 +49,9 @@ export async function updateUserData(data) {
   await AsyncStorage.setItem(userSessionKey, userData)
   return userData
 }
+
+export async function updateFav(data) {
+  const userData = JSON.stringify(data)
+  await AsyncStorage.setItem(userSessionKey, userData)
+  return userData
+}
