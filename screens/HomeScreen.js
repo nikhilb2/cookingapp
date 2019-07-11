@@ -27,6 +27,10 @@ export default function HomeScreen(props) {
             <Category category={category} />
           </TouchableOpacity>
         ))}
+        <View style={styles.aboutApp}>
+          <Text style={styles.aboutTitle}>About App</Text>
+          <Text style={styles.aboutText}>{cooking.AboutApp.Description}</Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -48,8 +52,25 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+
   },
   contentContainer: {
     paddingTop: theme.spacing.unit,
+    marginTop: 'auto',
+    marginBottom: 'auto'
   },
+  aboutApp: {
+    margin: theme.spacing.unit *2,
+    borderColor: theme.palette.primary.main,
+    borderWidth: 2,
+    borderRadius: theme.spacing.unit *2,
+    padding: theme.spacing.unit
+  },
+  aboutTitle: {
+    ...theme.typography.h2
+  },
+  aboutText: {
+    ...theme.typography.caption,
+    textAlign: 'justify'
+  }
 });

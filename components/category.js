@@ -25,10 +25,16 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: theme.spacing.unit,
-    marginLeft: theme.spacing.unit
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   text: {
     ...theme.typography.h3,
+    width: '50%',
+    textAlign: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    margin: theme.spacing.unit
   }
 })
 
