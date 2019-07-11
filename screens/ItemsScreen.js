@@ -23,9 +23,9 @@ export default function ItemsScreen(props) {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
           {params.items.map((item, i)=> (
-            <TouchableOpacity onPress={() => navigation.navigate("Item", {item:item})} key={item.Name+i}>
+            <TouchableOpacity style={styles.holder} onPress={() => navigation.navigate("Item", {item:item})} key={item.Name+i}>
               <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
-              <Text>{item.Name}</Text>
+              <Text style={styles.text}>{item.Name}</Text>
             </TouchableOpacity>
           ))}
       </ScrollView>
@@ -53,8 +53,20 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingTop: theme.spacing.unit,
   },
+  holder: {
+    display: 'flex',
+    flexDirection: 'row',
+    padding: theme.spacing.unit/2
+  },
   image:{
     width: 80,
-    height: 80
+    height: 80,
+    borderRadius: theme.spacing.unit
+  },
+  text: {
+    ...theme.typography.h2,
+    marginTop: 'auto',
+    marginBottom: 'auto',
+    marginLeft: theme.spacing.unit * 2
   }
 });

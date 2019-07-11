@@ -27,14 +27,14 @@ export default function ItemScreen(props) {
           <Text>{params.item.Name}</Text>
         </View>
           {params.item.Details.map((detail, i)=> (
-            <View>
+            <View key={detail.title+""+i}>
                 <View>
                   <Text>{detail.Title}</Text>
                   <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
                   <Text>{detail.Description}</Text>
                 </View>
               {params.item.RelatedImages.map((image,i) => {
-                <View>
+                <View key={image.Description+""+i}>
                   <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
                   <Text>{image.Description}</Text>
                 </View>
