@@ -1,5 +1,5 @@
-import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
+
+import React, { Component } from 'react';
 import {
   Image,
   Platform,
@@ -8,45 +8,65 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Dimensions
+  Dimensions,
+  Modal
 } from 'react-native';
 
 import theme from '../src/theme'
-
+import Button from '../components/button'
 
 const { width } = Dimensions.get('window')
 
-export default function ItemScreen(props) {
-  const { params } = props.navigation.state
-  console.log('params');
-  console.log(params);
-  return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
-        <View style={styles.titleholder}>
-          {params.item.Image.length > 0 ? <Image resizeMode='stretch' style={styles.imagesmall} source={{uri: params.item.Image}} /> : null }
-          <Text style={styles.title}>{params.item.Name}</Text>
-        </View>
-          {params.item.Details.map((detail, i)=> (
-            <View style={styles.holder} key={detail.title+""+i}>
-                <View>
-                  <Text style={styles.captionText}>{detail.Title}</Text>
-                  {detail.Image.length > 0 ? <Image resizeMode='stretch' style={styles.image} source={{uri: detail.Image}} /> : null}
-                  <Text>{detail.Description}</Text>
-                </View>
-              {params.item.RelatedImages.map((image,i) => {
-                <View style={styles.holder} key={image.Description+""+i}>
-                {image.Image.length>0 ? <Image resizeMode='stretch' style={styles.image} source={{uri: image.Image}} /> : null}
-                  <Text>{image.Description}</Text>
-                </View>
-              })}
-            </View>
-          ))}
-      </ScrollView>
-    </View>
-  );
+class ItemScreen extends Component {
+
+  state = {
+    showModal: false
+  }
+
+  render() {
+    const { params } = this.props.navigation.state
+    console.log('params');
+    console.log(params);
+    return (
+      <View style={styles.container}>
+        <ScrollView
+          style={styles.container}
+          contentContainerStyle={styles.contentContainer}>
+          <View style={styles.titleholder}>
+            {params.item.Image.length > 0 ? <Image resizeMode='stretch' style={styles.imagesmall} source={{uri: params.item.Image}} />: null }
+            <Text style={styles.title}>{params.item.Name}</Text>
+          </View>
+            {params.item.Details.map((detail, i)=> (
+              <View style={styles.holder} key={detail.title+""+i}>
+                  <View>
+                    <Text style={styles.captionText}>{detail.Title}</Text>
+                    {detail.Image.length > 0 ? <TouchableOpacity onPress={()=> this.setState({showModal: true, source:detail.Image})}><Image resizeMode='stretch' style={styles.image} source={{uri: detail.Image}} /><Text style={styles.imageTap}>Tap Image to see full size</Text></TouchableOpacity>: null}
+                    <Text>{detail.Description}</Text>
+                  </View>
+                {params.item.RelatedImages.map((image,i) => {
+                  <View style={styles.holder} key={image.Description+""+i}>
+                  {image.Image.length>0 ? <TouchableOpacity onPress={()=> this.setState({showModal: true, source:detail.Image})}><Image resizeMode='stretch' style={styles.image} source={{uri: image.Image}} /><Text style={styles.imageTap}>Tap Image to see full size</Text></TouchableOpacity> : null}
+                    <Text>{image.Description}</Text>
+                  </View>
+                })}
+              </View>
+            ))}
+        </ScrollView>
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.showModal}
+          onRequestClose={() => this.setState({showModal: false})}
+        >
+        <View style={styles.modalHolder}>
+          <Image resizeMode='stretch' style={styles.modalImage} source={{uri: this.state.source}} />
+            <Button caption="Close" style={styles.button} onClick={()=>this.setState({showModal: false})} />
+          </View>
+        </Modal>
+      </View>
+    );
+  }
+
 }
 
 ItemScreen.navigationOptions = {
@@ -96,5 +116,25 @@ const styles = StyleSheet.create({
   captionText: {
     ...theme.typography.h3,
     fontWeight: 'bold'
+  },
+  modalImage: {
+    width: width,
+    height: 300
+  },
+  modalHolder: {
+    marginTop: 'auto',
+    marginBottom: 'auto'
+  },
+  button: {
+    marginRight: 'auto',
+    marginLeft: 'auto'
+  },
+  imageTap: {
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    margin: theme.spacing.unit/2,
+    fontWeight: 'bold'
   }
 });
+
+export default ItemScreen
