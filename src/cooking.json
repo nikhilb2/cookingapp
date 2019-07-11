@@ -1,0 +1,26 @@
+{
+	"AboutApp": {
+		"Description": "This App helps user to improve cooking quality."
+	},
+	"Categories": [{
+		"Name": "Indian Food",
+		"Items": [{
+			"Name": "Rajma Chawal",
+			"Details": [{
+					"Title": "About Rajma Chawal",
+					"Image": "IMAGEURL",
+					"Description": "Rajma Chawal description"
+				},
+				{
+					"Title": "Process for cooking Rajma Chawal",
+					"Image": "IMAGEURL",
+					"Description": "Rajma Chawal description"
+				}
+			],
+			"RelatedImages": [{
+				"Image": "IMAGEURL",
+				"Description": "ImageDescription"
+			}]
+		}]
+	}]
+}
