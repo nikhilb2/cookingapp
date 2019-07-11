@@ -13,27 +13,29 @@ import {
 import theme from '../src/theme'
 
 
-export default function HomeScreen() {
-  const { params } = this.props.navigation.state
+export default function ItemScreen(props) {
+  const { params } = props.navigation.state
+  console.log('params');
+  console.log(params);
   return (
     <View style={styles.container}>
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
-          {params.items.map((item, i)=> (
+        <View>
+          <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
+          <Text>{params.item.Name}</Text>
+        </View>
+          {params.item.Details.map((detail, i)=> (
             <View>
-              <Image source={require('../assets/images/food.jpeg')} />
-              <Text>{params.items.Name}</Text>
-              {params.Details.map((detail, i) => (
                 <View>
                   <Text>{detail.Title}</Text>
-                  <Image source={require('../assets/images/food.jpeg')} />
+                  <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
                   <Text>{detail.Description}</Text>
                 </View>
-              ))}
-              {params.RelatedImages.map((image,i) => {
+              {params.item.RelatedImages.map((image,i) => {
                 <View>
-                  <Image source={require('../assets/images/food.jpeg')} />
+                  <Image style={styles.image} source={require('../assets/images/food.jpeg')} />
                   <Text>{image.Description}</Text>
                 </View>
               })}
@@ -44,7 +46,7 @@ export default function HomeScreen() {
   );
 }
 
-HomeScreen.navigationOptions = {
+ItemScreen.navigationOptions = {
   headerTitle: 'Cooking',
   headerStyle: {
     backgroundColor: '#f06297',
@@ -64,4 +66,8 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingTop: theme.spacing.unit,
   },
+  image: {
+    height: 80,
+    width: 80
+  }
 });

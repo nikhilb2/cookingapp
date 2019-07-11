@@ -15,14 +15,16 @@ import cooking from '../src/cooking'
 import Category from '../components/category'
 
 
-export default function HomeScreen() {
+export default function HomeScreen(props) {
+  console.log(props);
+  const { navigation } = props
   return (
     <View style={styles.container}>
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
         {cooking.Categories.map((category,i)=>(
-          <TouchableOpacity key={category.Name+i}>
+          <TouchableOpacity onPress={()=> navigation.navigate("Items", {items:category.Items})} key={category.Name+i}>
             <Category category={category} />
           </TouchableOpacity>
         ))}
