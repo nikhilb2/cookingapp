@@ -1,5 +1,5 @@
 import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Image,
   Platform,
@@ -12,41 +12,43 @@ import {
 
 import theme from '../src/theme'
 import cooking from '../src/cooking'
-import TextField from '../components/inputField'
+import InputField from '../components/inputfield'
+import { restoreSession } from '../src/UserSession'
 
+class FirstTimeScreen extends Component {
 
-export default function HomeScreen(props) {
-  console.log(props);
-  const { navigation } = props
-  return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
-        <InputField
-          value={phonenumber}
-          onChange={text => this.setState({ name: text })}
-          label="Name"
-          placeholder="Enter Your name"
-          style={styles.inputField}
-          autoCapitalize="none"
-        />
-      </ScrollView>
-    </View>
-  );
-}
-
-HomeScreen.navigationOptions = {
-  headerTitle: 'Cooking',
-  headerStyle: {
-    backgroundColor: 'skyblue',
-    height: 65
-  },
-  headerTintColor: '#fff',
-  headerTitleStyle: {
-    fontWeight: 'bold'
+  state = {
+    name: null
   }
+
+
+  componentDidMount() {
+    restoreSession()
+  }
+
+  render() {
+    const { navigation } = this.props
+    const { name } = this.state
+    return (
+      <View style={styles.container}>
+        <ScrollView
+          style={styles.container}
+          contentContainerStyle={styles.contentContainer}>
+          <InputField
+            value={name}
+            onChange={text => this.setState({ name: text })}
+            label="Name"
+            placeholder="Enter Your name"
+            style={styles.inputField}
+            autoCapitalize="none"
+          />
+        </ScrollView>
+      </View>
+    )
+  }
+
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -55,5 +57,10 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: theme.spacing.unit,
+    marginTop: 'auto',
+    marginBottom: 'auto',
+    margin: theme.spacing.unit
   },
 });
+
+export default FirstTimeScreen
