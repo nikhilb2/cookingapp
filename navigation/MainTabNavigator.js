@@ -10,6 +10,7 @@ import ItemsScreen from '../screens/ItemsScreen';
 import ItemScreen from '../screens/ItemScreen';
 import FavoriteScreen from '../screens/FavoriteScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import OtherBenefitsScreen from '../screens/OtherBenefitsScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -20,7 +21,8 @@ const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
     Items: ItemsScreen,
-    Item: ItemScreen
+    Item: ItemScreen,
+    OtherBenefits: OtherBenefitsScreen
   },
   config
 );
