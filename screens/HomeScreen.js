@@ -38,7 +38,7 @@ export default function HomeScreen(props) {
 }
 
 HomeScreen.navigationOptions = {
-  headerTitle: 'Cooking',
+  headerTitle: 'Food Nutrition',
   headerStyle: {
     backgroundColor: 'skyblue',
     height: 65,

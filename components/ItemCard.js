@@ -26,6 +26,7 @@ export default function ItemCard(props) {
         onPress={() => navigateTo("Item", { item: item })}
       >
         <Image
+          resizeMode='stretch'  
           style={styles.image}
           source={{uri: item.Image}}
         />

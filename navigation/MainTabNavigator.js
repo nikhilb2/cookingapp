@@ -8,6 +8,7 @@ import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import ItemsScreen from '../screens/ItemsScreen';
 import ItemScreen from '../screens/ItemScreen';
+import FavoriteScreen from '../screens/FavoriteScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -39,21 +40,21 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
-const LinksStack = createStackNavigator(
+const FavoriteStack = createStackNavigator(
   {
-    Links: LinksScreen,
+    Favorite: FavoriteScreen,
   },
   config
 );
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+FavoriteStack.navigationOptions = {
+  tabBarLabel: 'Favorites',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-heart' : 'md-heart'} />
   ),
 };
 
-LinksStack.path = '';
+FavoriteStack.path = '';
 
 const SettingsStack = createStackNavigator(
   {
@@ -73,7 +74,7 @@ SettingsStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  FavoriteStack,
   SettingsStack,
 });
 

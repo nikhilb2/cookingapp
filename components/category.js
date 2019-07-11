@@ -8,7 +8,7 @@ const CategoryItem = props => {
   const { category } = props
   return (
     <View style={styles.root}>
-        <Image style={styles.image} source={{uri:category.Image}} />
+        <Image resizeMode='stretch' style={styles.image} source={{uri:category.Image}} />
         <Text style={styles.text} numberOfLines={2}
           ellipsizeMode="tail">{titleCase(category.Name)}</Text>
       <Entypo

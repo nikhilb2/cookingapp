@@ -8,10 +8,13 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Dimensions
 } from 'react-native';
 
 import theme from '../src/theme'
 
+
+const { width } = Dimensions.get('window')
 
 export default function ItemScreen(props) {
   const { params } = props.navigation.state
@@ -23,19 +26,19 @@ export default function ItemScreen(props) {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
         <View style={styles.titleholder}>
-          {params.item.Image.length > 0 ? <Image style={styles.imagesmall} source={{uri: params.item.Image}} /> : null }
+          {params.item.Image.length > 0 ? <Image resizeMode='stretch' style={styles.imagesmall} source={{uri: params.item.Image}} /> : null }
           <Text style={styles.title}>{params.item.Name}</Text>
         </View>
           {params.item.Details.map((detail, i)=> (
             <View style={styles.holder} key={detail.title+""+i}>
                 <View>
                   <Text style={styles.captionText}>{detail.Title}</Text>
-                  {detail.Image.length > 0 ? <Image style={styles.image} source={{uri: detail.Image}} /> : null}
+                  {detail.Image.length > 0 ? <Image resizeMode='stretch' style={styles.image} source={{uri: detail.Image}} /> : null}
                   <Text>{detail.Description}</Text>
                 </View>
               {params.item.RelatedImages.map((image,i) => {
                 <View style={styles.holder} key={image.Description+""+i}>
-                {image.Image.length>0 ? <Image style={styles.image} source={{uri: image.Image}} /> : null}
+                {image.Image.length>0 ? <Image resizeMode='stretch' style={styles.image} source={{uri: image.Image}} /> : null}
                   <Text>{image.Description}</Text>
                 </View>
               })}
@@ -47,7 +50,7 @@ export default function ItemScreen(props) {
 }
 
 ItemScreen.navigationOptions = {
-  headerTitle: 'Cooking',
+  headerTitle: 'Details',
   headerStyle: {
     backgroundColor: 'skyblue',
     height: 65
@@ -74,10 +77,12 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   image:{
-    width: 150,
+    width: width * .9,
     height: 150,
     borderRadius: theme.spacing.unit,
-    alignItems: 'center'
+    alignItems: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   imagesmall:{
     width: 80,

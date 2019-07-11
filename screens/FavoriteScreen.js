@@ -15,7 +15,7 @@ import { AntDesign } from '@expo/vector-icons'
 import { logout, currentSession, updateFav } from '../src/UserSession'
 import ItemCard from '../components/ItemCard'
 
-class  ItemsScreen extends Component {
+class  FavoriteScreen extends Component {
 
   state = {
 
@@ -52,15 +52,13 @@ class  ItemsScreen extends Component {
   }
 
   render() {
-    const { params } = this.props.navigation.state
     const { navigation } = this.props
-    console.log(params);
     return (
       <View style={styles.container}>
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainer}>
-            {params.items.map((item, i)=> (
+            {currentSession.favoriteData.map((item, i)=> (
               <View key={item.Name+""+i}>
                 <ItemCard navigateTo={(screen, params) =>navigation.navigate(screen, params)} favorite={this.findItem(item.Name)} addTofavourites={(item, id) => this.addTofavourites(item, id)} item={item} removeFromfavorites={(id) => this.removeFromfavorites(id)}/>
               </View>
@@ -72,8 +70,8 @@ class  ItemsScreen extends Component {
 
 }
 
-ItemsScreen.navigationOptions = {
-  headerTitle: 'Select Item',
+FavoriteScreen.navigationOptions = {
+  headerTitle: 'My Favorites',
   headerStyle: {
     backgroundColor: 'skyblue',
     height: 65
@@ -115,4 +113,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default ItemsScreen
+export default FavoriteScreen
