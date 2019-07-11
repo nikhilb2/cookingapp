@@ -9,6 +9,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 import ItemsScreen from '../screens/ItemsScreen';
 import ItemScreen from '../screens/ItemScreen';
 import FavoriteScreen from '../screens/FavoriteScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -56,26 +57,27 @@ FavoriteStack.navigationOptions = {
 
 FavoriteStack.path = '';
 
-const SettingsStack = createStackNavigator(
+const ProfileStack = createStackNavigator(
   {
-    Settings: SettingsScreen,
+    Profile: ProfileScreen
+
   },
   config
 );
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+ProfileStack.navigationOptions = {
+  tabBarLabel: 'Profile',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-contact' : 'md-contact'} />
   ),
 };
 
-SettingsStack.path = '';
+ProfileStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   FavoriteStack,
-  SettingsStack,
+  ProfileStack,
 });
 
 tabNavigator.path = '';
