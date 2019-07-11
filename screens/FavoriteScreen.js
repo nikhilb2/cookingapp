@@ -14,6 +14,7 @@ import theme from '../src/theme'
 import { AntDesign } from '@expo/vector-icons'
 import { logout, currentSession, updateFav } from '../src/UserSession'
 import ItemCard from '../components/ItemCard'
+import { NavigationEvents } from 'react-navigation'
 
 class  FavoriteScreen extends Component {
 
@@ -55,6 +56,7 @@ class  FavoriteScreen extends Component {
     const { navigation } = this.props
     return (
       <View style={styles.container}>
+        <NavigationEvents onWillFocus={() => this.setState({hack:true})} />
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainer}>
@@ -63,6 +65,7 @@ class  FavoriteScreen extends Component {
                 <ItemCard navigateTo={(screen, params) =>navigation.navigate(screen, params)} favorite={this.findItem(item.Name)} addTofavourites={(item, id) => this.addTofavourites(item, id)} item={item} removeFromfavorites={(id) => this.removeFromfavorites(id)}/>
               </View>
             ))}
+            {currentSession.favoriteData.length< 1 ? <Text style={styles.text}>You didnt added anything in favorites</Text>: null}
         </ScrollView>
       </View>
     );
