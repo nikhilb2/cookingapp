@@ -13,17 +13,21 @@ import {
 import theme from '../src/theme'
 import cooking from '../src/cooking'
 import InputField from '../components/inputfield'
-import { restoreSession } from '../src/UserSession'
-
+import { restoreSession, currentSession, login } from '../src/UserSession'
+import Button from '../components/button'
 class FirstTimeScreen extends Component {
 
   state = {
-    name: null
+    name: null,
+    user: null
   }
 
 
-  componentDidMount() {
-    restoreSession()
+  async componentDidMount() {
+    await restoreSession()
+    console.log(currentSession);
+    this.setState({user: currentSession})
+
   }
 
   render() {
@@ -34,6 +38,12 @@ class FirstTimeScreen extends Component {
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainer}>
+          <View>
+            <Text style={styles.welcome}>Welcome</Text>
+            <Text style={styles.first}>First time app launch detected</Text>
+            <Text style={styles.first}>Please enter your name to continue</Text>
+          </View>
+          <View style={styles.enterName}>
           <InputField
             value={name}
             onChange={text => this.setState({ name: text })}
@@ -42,6 +52,11 @@ class FirstTimeScreen extends Component {
             style={styles.inputField}
             autoCapitalize="none"
           />
+          <Button
+            caption='Continue'
+            style={styles.button}
+            />
+          </View>
         </ScrollView>
       </View>
     )
@@ -57,10 +72,36 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: theme.spacing.unit,
+    margin: theme.spacing.unit,
     marginTop: 'auto',
-    marginBottom: 'auto',
-    margin: theme.spacing.unit
+    marginBottom: 'auto'
   },
+  button: {
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  inputField: {
+    width: '70%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  welcome: {
+    margin: theme.spacing.unit,
+    ...theme.typography.h2,
+    textAlign: 'center'
+  },
+  first: {
+    ...theme.typography.caption,
+        textAlign: 'center'
+  },
+  enterName: {
+    margin: theme.spacing.unit * 3,
+    borderColor: 'skyblue',
+    borderWidth: theme.spacing.unit/2,
+    padding: theme.spacing.unit,
+    borderRadius: theme.spacing.unit * 2
+
+  }
 });
 
 export default FirstTimeScreen
