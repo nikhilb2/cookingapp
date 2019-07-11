@@ -14,6 +14,7 @@ import theme from '../src/theme'
 import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'
 import {  currentSession } from '../src/UserSession'
 import { titleCase } from '../utils/capitalize'
+import { NavigationEvents } from 'react-navigation'
 class  ProfileScreen extends Component {
 
   state = {
@@ -25,6 +26,7 @@ class  ProfileScreen extends Component {
     const { navigation } = this.props
     return (
       <View style={styles.container}>
+      <NavigationEvents onWillFocus={() => this.setState({hack:true})} />
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainer}>

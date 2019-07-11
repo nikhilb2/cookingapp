@@ -13,11 +13,9 @@ import { SafeAreaView } from "react-navigation";
 import theme from '../src/theme'
 import cooking from '../src/cooking'
 import Category from '../components/category'
-import { logout, currentSession } from '../src/UserSession'
+import { currentSession } from '../src/UserSession'
 
 export default function HomeScreen(props) {
-  console.log('currentSession');
-  console.log(currentSession);
   const { navigation } = props
   return (
     <SafeAreaView style={styles.container} forceInset={{ bottom: 'never' }}>
@@ -29,9 +27,6 @@ export default function HomeScreen(props) {
             <Category category={category} />
           </TouchableOpacity>
         ))}
-        <TouchableOpacity onPress={()=>logout()} >
-          <Text>Logout</Text>
-        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );

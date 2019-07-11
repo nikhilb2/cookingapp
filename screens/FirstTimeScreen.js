@@ -43,6 +43,7 @@ class FirstTimeScreen extends Component {
           style={styles.container}
           contentContainerStyle={styles.contentContainer}>
           <View>
+          <Image source={require('../assets/images/logo.jpg')} style={styles.image} resizeMode='stretch'/>
             <Text style={styles.welcome}>Welcome</Text>
             <Text style={styles.first}>First time app launch detected</Text>
             <Text style={styles.first}>Please enter your name to continue</Text>
@@ -66,6 +67,7 @@ class FirstTimeScreen extends Component {
                   favoriteIds: [],
                   favoriteData: []
                 })
+                navigation.navigate("Main")
               } else {
                 Alert.alert("Error", "Please enter your name")
               }
@@ -116,6 +118,12 @@ const styles = StyleSheet.create({
     padding: theme.spacing.unit,
     borderRadius: theme.spacing.unit * 2
 
+  },
+  image: {
+    width: 150,
+    height: 150,
+    marginRight: 'auto',
+    marginLeft: 'auto'
   }
 });
 

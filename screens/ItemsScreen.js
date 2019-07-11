@@ -14,6 +14,7 @@ import theme from '../src/theme'
 import { AntDesign } from '@expo/vector-icons'
 import { logout, currentSession, updateFav } from '../src/UserSession'
 import ItemCard from '../components/ItemCard'
+import { NavigationEvents } from 'react-navigation'
 
 class  ItemsScreen extends Component {
 
@@ -57,6 +58,7 @@ class  ItemsScreen extends Component {
     console.log(params);
     return (
       <View style={styles.container}>
+      <NavigationEvents onWillFocus={() => this.setState({hack:true})} />
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainer}>
