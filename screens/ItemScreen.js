@@ -44,12 +44,6 @@ class ItemScreen extends Component {
                     {detail.Image.length > 0 ? <TouchableOpacity onPress={()=> this.setState({showModal: true, source:detail.Image})}><Image resizeMode='stretch' style={styles.image} source={{uri: detail.Image}} /><Text style={styles.imageTap}>Tap Image to see full size</Text></TouchableOpacity>: null}
                     <Text>{detail.Description}</Text>
                   </View>
-                {params.item.RelatedImages.map((image,i) => {
-                  <View style={styles.holder} key={image.Description+""+i}>
-                  {image.Image.length>0 ? <TouchableOpacity onPress={()=> this.setState({showModal: true, source:detail.Image})}><Image resizeMode='stretch' style={styles.image} source={{uri: image.Image}} /><Text style={styles.imageTap}>Tap Image to see full size</Text></TouchableOpacity> : null}
-                    <Text>{image.Description}</Text>
-                  </View>
-                })}
               </View>
             ))}
         </ScrollView>
@@ -64,7 +58,7 @@ class ItemScreen extends Component {
             <Button caption="Close" style={styles.button} onClick={()=>this.setState({showModal: false})} />
           </View>
         </Modal>
-        <Button style={styles.button} caption='Other Benefits' onClick={()=> navigation.navigate('OtherBenefits', {OtherBenefits: params.item.RelatedImages})} />
+        <Button style={styles.button} caption='Other Benefits' onClick={()=> navigation.navigate('OtherBenefits', {otherBenefits: params.item.RelatedImages})} />
       </View>
     );
   }
