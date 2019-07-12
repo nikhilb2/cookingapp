@@ -15,6 +15,7 @@ import { AntDesign } from '@expo/vector-icons'
 import { logout, currentSession, updateFav } from '../src/UserSession'
 import ItemCard from '../components/ItemCard'
 import { NavigationEvents } from 'react-navigation'
+import { Divider } from 'react-native-elements';
 
 class  FavoriteScreen extends Component {
 
@@ -63,6 +64,7 @@ class  FavoriteScreen extends Component {
             {currentSession.favoriteData.map((item, i)=> (
               <View key={item.Name+""+i}>
                 <ItemCard navigateTo={(screen, params) =>navigation.navigate(screen, params)} favorite={this.findItem(item.Name)} addTofavourites={(item, id) => this.addTofavourites(item, id)} item={item} removeFromfavorites={(id) => this.removeFromfavorites(id)}/>
+                <Divider style={{ backgroundColor: 'skyblue' , height: 1, marginLeft:theme.spacing.unit, marginRight:theme.spacing.unit}} />
               </View>
             ))}
             {currentSession.favoriteData.length< 1 ? <Text style={styles.text}>You didnt added anything in favorites</Text>: null}

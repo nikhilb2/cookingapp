@@ -18,7 +18,7 @@ import { currentSession } from '../src/UserSession'
 export default function HomeScreen(props) {
   const { navigation } = props
   return (
-    <SafeAreaView style={styles.container} forceInset={{ bottom: 'never' }}>
+    <SafeAreaView style={styles.container} forceInset={{  bottom: 'never' }}>
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
@@ -40,11 +40,11 @@ HomeScreen.navigationOptions = {
   headerTitle: 'Food Nutrition',
   headerStyle: {
     backgroundColor: 'skyblue',
-    height: 65,
   },
   headerTintColor: '#fff',
   headerTitleStyle: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    flex: 1
   },
 }
 
@@ -56,8 +56,6 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: theme.spacing.unit,
-    marginTop: 'auto',
-    marginBottom: 'auto'
   },
   aboutApp: {
     margin: theme.spacing.unit *2,

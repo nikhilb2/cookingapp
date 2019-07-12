@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "cooking app",
-    "slug": "cookingapp",
+    "name": "Health and Nutrition Guide",
+    "slug": "nutritionguide",
     "privacy": "public",
     "sdkVersion": "33.0.0",
     "platforms": [
@@ -9,7 +9,7 @@
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/nutri.png",
     "splash": {
@@ -25,7 +25,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "host.health.nutrition",
+      "bundleIdentifier": "host.guide.nutrition",
     }
   }
 }

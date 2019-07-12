@@ -1,18 +1,23 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import theme from '../src/theme'
 import { titleCase } from '../utils/capitalize'
+
+const { width } = Dimensions.get('window')
 
 const CategoryItem = props => {
   const { category } = props
   return (
     <View style={styles.root}>
         <Image resizeMode='stretch' style={styles.image} source={{uri:category.Image}} />
+        <View style={styles.buttonText} >
         <Text style={styles.text} numberOfLines={2}
           ellipsizeMode="tail">{titleCase(category.Name)}</Text>
+          </View>
     </View>
   )
 }
+
 const styles = StyleSheet.create({
   root: {
 
@@ -22,7 +27,7 @@ const styles = StyleSheet.create({
     marginBottom: theme.spacing.unit
   },
   image:{
-    width: 150,
+    width: width * .9,
     height: 150,
     borderRadius: theme.spacing.unit,
     marginLeft: 'auto',
@@ -30,11 +35,21 @@ const styles = StyleSheet.create({
   },
   text: {
     ...theme.typography.h3,
-    width: '50%',
+    width: '80%',
     textAlign: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
-    margin: theme.spacing.unit
+    margin: theme.spacing.unit,
+    color: theme.palette.primary.contrastText,
+
+  },
+  buttonText: {
+    backgroundColor: theme.palette.primary.main,
+    borderRadius: theme.spacing.unit,
+    width: '50%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: theme.spacing.unit
   }
 })
 
